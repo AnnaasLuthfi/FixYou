@@ -48,7 +48,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="50dp"
         android:text="@string/sign_in"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/botton_sign_in"
+        android:backgroundTint="@color/purple_500"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
@@ -57,7 +60,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginRight="50dp"
+        android:textColor="@color/black"
         android:text="@string/sign_up"
+        android:backgroundTint="@color/white"
         android:background="@drawable/btn_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
