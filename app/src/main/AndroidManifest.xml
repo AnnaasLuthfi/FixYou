@@ -8,10 +8,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyPsikolog">
+        android:theme="@style/Theme.MyPsikolog"
+        android:hardwareAccelerated="false">
         <activity android:name=".RegisterActivity"></activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".AfterSplash" />
+        <activity android:name=".AfterSplashActivity" />
         <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
