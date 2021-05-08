@@ -9,5 +9,7 @@ class AfterSplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_after_splash)
 
         supportActionBar?.hide()
+
+
     }
 }
