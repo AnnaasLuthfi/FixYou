@@ -27,7 +27,7 @@
             android:id="@+id/name_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="@string/first_and_last_name"
@@ -51,7 +51,7 @@
             android:id="@+id/phone_number_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="@string/phone_number"
@@ -63,7 +63,7 @@
             android:id="@+id/password_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="@string/password"
@@ -75,7 +75,7 @@
             android:id="@+id/address_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/ic_baseline_home_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="@string/address"
@@ -87,13 +87,61 @@
             android:id="@+id/age_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/ic_baseline_gender_24"
             android:drawablePadding="16dp"
             android:ems="10"
             android:hint="@string/age"
             android:inputType="text"
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/address_sign_up"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/age_sign_up">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/female" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/other" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_sign_up"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
