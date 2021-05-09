@@ -6,31 +6,27 @@ import android.os.Bundle
 import android.view.View
 import com.myapps.mypsikolog.databinding.ActivityAfterSplashBinding
 
-class AfterSplashActivity : AppCompatActivity(), View.OnClickListener {
+class AfterSplashActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAfterSplashBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_after_splash)
+        binding = ActivityAfterSplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.hide()
 
-        binding.btnSignIn.setOnClickListener(this)
-        binding.btnSignUp.setOnClickListener(this)
-
-    }
-
-    override fun onClick(v: View?) {
-        when(v?.id) {
-            R.id.btnSignIn -> {
-                startActivity(Intent(this@AfterSplashActivity, LoginActivity::class.java))
-            }
-
-            R.id.btnSignUp -> {
-                startActivity(Intent(this@AfterSplashActivity, RegisterActivity::class.java))
-            }
+        binding?.btnSignIn?.setOnClickListener {
+            val intent = Intent(this@AfterSplashActivity, LoginActivity::class.java)
+            startActivity(intent)
         }
+
+        binding?.btnSignUp?.setOnClickListener{
+            startActivity(Intent(this@AfterSplashActivity, RegisterActivity::class.java))
+        }
+
     }
+
 }
