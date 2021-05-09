@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.myapps.mypsikolog">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPsikolog"
         android:hardwareAccelerated="false">
-        <activity android:name=".AfterSplashActivity" />
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".LoginActivity" />
+
         <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".AfterSplashActivity" />
+
+        <activity android:name=".RegisterActivity"
+            android:parentActivityName=".AfterSplashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AfterSplashActivity"/>
+        </activity>
+
+        <activity android:name=".LoginActivity"
+            android:parentActivityName=".AfterSplashActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".AfterSplashActivity"/>
+        </activity>
+
         <activity android:name=".MainActivity"/>
     </application>
 
