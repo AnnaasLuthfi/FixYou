@@ -12,7 +12,6 @@
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp">
 
-
         <TextView
             android:id="@+id/text_sign_up"
             android:layout_width="wrap_content"
@@ -25,7 +24,19 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/name_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/first_and_last_name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/text_sign_up"/>
+
+        <EditText
+            android:id="@+id/email_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_baseline_email_24"
@@ -34,7 +45,57 @@
             android:hint="@string/email_address"
             android:inputType="textEmailAddress"
             android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/text_sign_up"/>
+            app:layout_constraintTop_toBottomOf="@id/name_sign_up"/>
+
+        <EditText
+            android:id="@+id/phone_number_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/email_sign_up"/>
+
+        <EditText
+            android:id="@+id/password_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/phone_number_sign_up"/>
+
+        <EditText
+            android:id="@+id/address_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/address"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/password_sign_up"/>
+
+        <EditText
+            android:id="@+id/age_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/address_sign_up"/>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
