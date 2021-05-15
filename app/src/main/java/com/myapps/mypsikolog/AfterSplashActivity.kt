@@ -3,7 +3,6 @@ package com.myapps.mypsikolog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.myapps.mypsikolog.databinding.ActivityAfterSplashBinding
 
 class AfterSplashActivity : AppCompatActivity() {
@@ -18,7 +17,7 @@ class AfterSplashActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        binding?.btnSignIn?.setOnClickListener {
+        binding.btnSignIn.setOnClickListener {
             val intent = Intent(this@AfterSplashActivity, LoginActivity::class.java)
             startActivity(intent)
         }

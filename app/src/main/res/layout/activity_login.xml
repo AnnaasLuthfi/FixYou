@@ -58,7 +58,7 @@
             app:layout_constraintTop_toBottomOf="@id/email_sign_in"/>
 
         <Button
-            android:id="@+id/btn_sign_in"
+            android:id="@+id/btn_sign_in_ho"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_sign_in"
