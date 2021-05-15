@@ -17,7 +17,7 @@ class LoginActivity : AppCompatActivity() {
 //        supportActionBar?.setIcon(R.drawable.ic_baseline_arrow_back_ios_24)
 
         binding.btnSignInHo.setOnClickListener {
-            val intent = Intent(this@LoginActivity, Journal2Activity::class.java)
+            val intent = Intent(this@LoginActivity, Journal1Activity::class.java)
             startActivity(intent)
         }
     }

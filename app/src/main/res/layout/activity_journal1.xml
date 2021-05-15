@@ -58,9 +58,13 @@
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:ems="10"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:gravity="start|top"
         android:inputType="textMultiLine"
+        android:background="#F9F6F6"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintCircleRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/desc" />
@@ -69,10 +73,11 @@
         android:id="@+id/nextBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="next"
+        android:text="Next"
         android:textColor="@color/purple_500"
         android:textSize="15sp"
-        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPurpose" />
 
