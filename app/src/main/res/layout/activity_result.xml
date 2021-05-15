@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity"
+    android:background="@color/white"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp">
+
+    <TextView
+        android:id="@+id/text_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fontsfree_net_sfprotext_bold"
+        android:text="@string/result"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/bad"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_result_title" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="When your mental health is bad, give yourself break. Don't make yourself feel guilty for things you can't do. Don't feel bad about eating bad, about not doing as much as you normally would. You're human. It's okay to struggle. Look after yourself, and your mind. It's important. "
+        app:layout_constraintTop_toBottomOf="@+id/image"
+        android:textSize="15sp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/sf_pro_display_light"/>
+
+
+    <TextView
+        android:id="@+id/btn_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fontsfree_net_sfprotext_regular"
+        android:text="Done"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_result" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

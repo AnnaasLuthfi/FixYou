@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPsikolog">
-        <activity android:name=".Journal2Activity"></activity>
+        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".Journal2Activity" />
         <activity android:name=".Journal1Activity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
