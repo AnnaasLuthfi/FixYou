@@ -1,8 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <TextView
+            android:id="@+id/text_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fontsfree_net_sfprotext_bold"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/name_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/first_and_last_name"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/text_sign_up"/>
+
+        <EditText
+            android:id="@+id/email_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/email_address"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/name_sign_up"/>
+
+        <EditText
+            android:id="@+id/phone_number_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/email_sign_up"/>
+
+        <EditText
+            android:id="@+id/password_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_lock_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/phone_number_sign_up"/>
+
+        <EditText
+            android:id="@+id/address_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_home_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/address"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/password_sign_up"/>
+
+        <EditText
+            android:id="@+id/age_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_gender_24"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:hint="@string/age"
+            android:inputType="text"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/address_sign_up"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/age_sign_up">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/male"
+                android:onClick="onRadioButtonClicked" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/female" />
+
+            <RadioButton
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/other" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_sign_up"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_sign_up"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
