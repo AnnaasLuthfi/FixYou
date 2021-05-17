@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".AfterSplash" />
+        <activity android:name=".AfterSplashActivity" />
         <activity android:name=".SplashActivity">
 
         </activity>
