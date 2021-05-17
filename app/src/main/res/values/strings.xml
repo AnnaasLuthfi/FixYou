@@ -3,4 +3,28 @@
     <string name="sign_in">Sign In</string>
     <string name="email_address">Email Address</string>
     <string name="password">Password</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_wishlist">Wishlist</string>
+    <string name="menu_my_order">My order</string>
+    <string name="menu_notifications">Notifications</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_log_out">Log Out</string>
+    <string name="my_order">My Order</string>
+    <string name="diagnoze">Diagnoze</string>
+    <string name="hello">Hello,</string>
+    <string name="user_name_example">Selena</string>
+    <string name="categories">Categories</string>
+    <string name="consult">Consult</string>
+    <string name="help">Help</string>
 </resources>
