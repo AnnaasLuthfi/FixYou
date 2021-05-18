@@ -48,6 +48,13 @@
             android:inputType="textPassword"
             android:layout_marginTop="20dp" />
 
-
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/purple_500"/>
     </LinearLayout>
 </ScrollView>
