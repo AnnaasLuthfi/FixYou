@@ -104,6 +104,7 @@
             android:text="Gender"
             android:textColor="@color/black"
             android:textSize="13sp"
+            android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/age_sign_up" />
 
@@ -114,7 +115,7 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:weightSum="3"
-            app:layout_constraintTop_toTopOf="@+id/titleGender">
+            app:layout_constraintTop_toBottomOf="@+id/titleGender">
 
             <RadioButton
                 android:id="@+id/male"
