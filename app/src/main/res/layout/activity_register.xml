@@ -103,7 +103,9 @@
             android:fontFamily="@font/fontsfree_net_sfprotext_regular"
             android:text="Gender"
             android:textColor="@color/black"
-            android:textSize="13sp"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
             android:padding="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/age_sign_up" />
@@ -146,7 +148,6 @@
             android:id="@+id/btn_sign_up"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
             android:text="@string/sign_up"
             android:textColor="@color/black"
             android:background="@drawable/btn_sign_up"
