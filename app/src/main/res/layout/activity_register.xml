@@ -96,6 +96,17 @@
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/address_sign_up"/>
 
+        <TextView
+            android:id="@+id/titleGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fontsfree_net_sfprotext_regular"
+            android:text="Gender"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_sign_up" />
+
         <RadioGroup
             android:id="@+id/radioGroup"
             android:layout_width="match_parent"
@@ -103,15 +114,15 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:weightSum="3"
-            app:layout_constraintTop_toBottomOf="@id/age_sign_up">
+            app:layout_constraintTop_toTopOf="@+id/titleGender">
 
             <RadioButton
                 android:id="@+id/male"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/male"
-                android:onClick="onRadioButtonClicked" />
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/male" />
 
             <RadioButton
                 android:id="@+id/female"

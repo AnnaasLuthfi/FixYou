@@ -45,7 +45,7 @@
             android:layout_height="195dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/banner"
-            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="@+id/textUsername"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textUsername"
             app:layout_constraintTop_toBottomOf="@+id/textUsername"
