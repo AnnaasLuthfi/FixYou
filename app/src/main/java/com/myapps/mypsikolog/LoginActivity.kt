@@ -14,6 +14,8 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
 //        supportActionBar?.setIcon(R.drawable.ic_baseline_arrow_back_ios_24)
 
 //        binding.btnSignInHo.setOnClickListener {
