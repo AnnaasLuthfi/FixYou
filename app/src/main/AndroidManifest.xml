@@ -11,9 +11,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.MyPsikolog"
-        tools:targetApi="m">
+        android:theme="@style/Theme.MyPsikolog">
+        <activity android:name=".psychology.PsychologActivity"
+            android:theme="@style/Theme.MyPsikolog.NoActionBar">
+
+        </activity>
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"

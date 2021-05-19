@@ -23,4 +23,19 @@
     <style name="Theme.MyPsikolog.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="Theme.MyPsikolog.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="text_style_bold">
+
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="text_style_light">
+
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
 </resources>
