@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.myapps.mypsikolog.databinding.ActivitySignUpBinding
 import com.myapps.mypsikolog.home.HomeActivity
+import com.myapps.mypsikolog.utils.Constants
 import com.myapps.mypsikolog.utils.Constants.Companion.ADDRESS_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.AGE_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.EMAIL_PATIENTS
@@ -36,6 +37,12 @@ class SignUpActivity : AppCompatActivity() {
 
         preferenceManager = PreferenceManager(applicationContext)
 
+        // mempertahankan SignUp
+        if (preferenceManager.getBoolean(KEY_IS_SIGNED_IN)) {
+            startActivity(Intent(applicationContext, HomeActivity::class.java))
+            finish()
+        }
+
         // Button Sign Up
         binding.btnSignUp.setOnClickListener {
             if (binding.nameSignUp.text.trim().isEmpty()){
@@ -56,7 +63,6 @@ class SignUpActivity : AppCompatActivity() {
                 signUp()
             }
         }
-
     }
 
     private fun signUp() {
@@ -74,8 +80,9 @@ class SignUpActivity : AppCompatActivity() {
         patient[GENDER_PATIENTS] = radioButton.text.toString()
 
         database.collection(KEY_PATIENTS).add(patient)
-            .addOnSuccessListener {
+            .addOnSuccessListener {documentReference ->
                 preferenceManager.putBoolean(KEY_IS_SIGNED_IN, true)
+                preferenceManager.putString(Constants.KEY_USER_ID, documentReference.id)
                 preferenceManager.putString(ADDRESS_PATIENTS, binding.addressSignUp.text.toString())
                 preferenceManager.putString(AGE_PATIENTS, binding.ageSignUp.text.toString())
                 preferenceManager.putString(EMAIL_PATIENTS, binding.emailSignUp.text.toString())

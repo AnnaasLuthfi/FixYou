@@ -11,6 +11,9 @@ class Constants {
         const val AGE_PATIENTS = "Age"
         const val GENDER_PATIENTS = "Gender"
 
+        const val KEY_USER_ID = "userId"
+        const val KEY_FCM_TOKEN = "fcmToken"
+
         const val KEY_PREFERENCE_NAME = "MyPsikologi"
         const val KEY_IS_SIGNED_IN = "isSignedIn"
     }
