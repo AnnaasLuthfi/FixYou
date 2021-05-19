@@ -36,6 +36,12 @@ class SignUpActivity : AppCompatActivity() {
 
         preferenceManager = PreferenceManager(applicationContext)
 
+        // mempertahankan SignUp
+        if (preferenceManager.getBoolean(KEY_IS_SIGNED_IN)) {
+            startActivity(Intent(applicationContext, HomeActivity::class.java))
+            finish()
+        }
+
         // Button Sign Up
         binding.btnSignUp.setOnClickListener {
             if (binding.nameSignUp.text.trim().isEmpty()){
@@ -56,7 +62,6 @@ class SignUpActivity : AppCompatActivity() {
                 signUp()
             }
         }
-
     }
 
     private fun signUp() {
