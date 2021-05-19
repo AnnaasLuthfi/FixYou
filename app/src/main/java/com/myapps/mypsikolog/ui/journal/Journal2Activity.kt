@@ -1,10 +1,10 @@
-package com.myapps.mypsikolog
+package com.myapps.mypsikolog.ui.journal
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.widget.AppCompatRadioButton
+import com.myapps.mypsikolog.R
 import com.myapps.mypsikolog.databinding.ActivityJournal2Binding
 
 class Journal2Activity : AppCompatActivity() {

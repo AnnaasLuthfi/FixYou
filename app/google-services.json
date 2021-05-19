@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "768740739278",
+    "project_id": "mypsikolog-77645",
+    "storage_bucket": "mypsikolog-77645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768740739278:android:c9000cdab172cbb72ae89f",
+        "android_client_info": {
+          "package_name": "com.myapps.mypsikolog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768740739278-8e2va8u1lps2dnehhue6k94ovnivc48d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEXJJfR6XO7bHYpQ1kKT-jDjKFJcqEJJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768740739278-8e2va8u1lps2dnehhue6k94ovnivc48d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

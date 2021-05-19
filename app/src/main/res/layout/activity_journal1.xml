@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Journal1Activity"
+    tools:context=".ui.journal.Journal1Activity"
     android:layout_marginStart="12dp"
     android:layout_marginEnd="12dp"
     android:background="@color/white">
