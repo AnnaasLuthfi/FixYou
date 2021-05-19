@@ -1,0 +1,26 @@
+FIREBASE
+Login pake akun adit
+c0050479@bangkit.academy (Pw: Babymetal123)
+
+1. Posisi google-service.json
+    ada di project -> app
+
+    *sdk
+        Project-level build.gradle
+        "classpath 'com.google.gms:google-services:4.3.8'"
+
+        App-level build.gradle
+        "id 'com.google.gms.google-services'"
+
+2. Setup Firebase Cloud Message (FCM)
+    Tools -> firebase -> cloud messaging
+
+    deklarasi ada di manifest
+    <service
+        android:name=".MyFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+    </service>
+
+    token FCM: fZMoh8yeTU-q9WVeN9Vgeu:APA91bE8-gSFRvxnqTVnuiomvnKHf7jQMeC-NljddLlJh9pYdFjKXyqEh2XLlnYcKFYA06WeeBv8b5yraVlCoTsQxzgaAhF8SP6Y5Kz_-nCyI1m9VVbJbSQimnVgCcLjwaKMDi-EiXzw
