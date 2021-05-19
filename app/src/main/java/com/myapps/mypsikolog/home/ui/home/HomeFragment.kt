@@ -7,11 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.myapps.mypsikolog.databinding.FragmentHomeBinding
+import com.myapps.mypsikolog.utils.Constants.Companion.NAME_PATIENTS
+import com.myapps.mypsikolog.utils.PreferenceManager
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var preferenceManager: PreferenceManager
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,6 +28,11 @@ class HomeFragment : Fragment() {
         homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        preferenceManager = PreferenceManager(requireActivity())
+
+        binding.textUsername.text = String.format("%s",
+            preferenceManager.getString(NAME_PATIENTS))
 
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {

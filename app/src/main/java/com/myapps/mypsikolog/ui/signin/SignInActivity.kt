@@ -16,6 +16,7 @@ import com.myapps.mypsikolog.utils.Constants.Companion.EMAIL_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.GENDER_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.KEY_IS_SIGNED_IN
 import com.myapps.mypsikolog.utils.Constants.Companion.KEY_PATIENTS
+import com.myapps.mypsikolog.utils.Constants.Companion.KEY_USER_ID
 import com.myapps.mypsikolog.utils.Constants.Companion.NAME_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.PASSWORD_PATIENTS
 import com.myapps.mypsikolog.utils.Constants.Companion.PHONE_PATIENTS
@@ -65,18 +66,15 @@ class SignInActivity : AppCompatActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful && task.result != null && task.result!!.documents.size > 0) {
                     val documentSnapshot: DocumentSnapshot = task.result!!.documents[0]
+                    preferenceManager.putBoolean(KEY_IS_SIGNED_IN, true)
+                    preferenceManager.putString(KEY_USER_ID, documentSnapshot.id)
                     preferenceManager.putString(ADDRESS_PATIENTS, documentSnapshot.getString(ADDRESS_PATIENTS).toString())
                     preferenceManager.putString(AGE_PATIENTS, documentSnapshot.getString(AGE_PATIENTS).toString())
-                    preferenceManager.putString(EMAIL_PATIENTS, documentSnapshot.getString(
-                        EMAIL_PATIENTS).toString())
-                    preferenceManager.putString(GENDER_PATIENTS, documentSnapshot.getString(
-                        GENDER_PATIENTS).toString())
-                    preferenceManager.putString(NAME_PATIENTS, documentSnapshot.getString(
-                        NAME_PATIENTS).toString())
-                    preferenceManager.putString(PASSWORD_PATIENTS, documentSnapshot.getString(
-                        PASSWORD_PATIENTS).toString())
-                    preferenceManager.putString(PHONE_PATIENTS, documentSnapshot.getString(
-                        PHONE_PATIENTS).toString())
+                    preferenceManager.putString(EMAIL_PATIENTS, documentSnapshot.getString(EMAIL_PATIENTS).toString())
+                    preferenceManager.putString(GENDER_PATIENTS, documentSnapshot.getString(GENDER_PATIENTS).toString())
+                    preferenceManager.putString(NAME_PATIENTS, documentSnapshot.getString(NAME_PATIENTS).toString())
+                    preferenceManager.putString(PASSWORD_PATIENTS, documentSnapshot.getString(PASSWORD_PATIENTS).toString())
+                    preferenceManager.putString(PHONE_PATIENTS, documentSnapshot.getString(PHONE_PATIENTS).toString())
 
                     val intent = Intent(applicationContext, HomeActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
