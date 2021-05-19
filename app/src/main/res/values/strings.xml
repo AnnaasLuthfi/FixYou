@@ -10,10 +10,8 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    <string name="search_hint">Search Doctor</string>
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_wishlist">Wishlist</string>
     <string name="menu_my_order">My order</string>
@@ -39,4 +37,13 @@
     <string name="my_purpose">My Purpose</string>
     <string name="desc_purpose">We recommend that you take the time to fill in the problem you are currently facing. We\'ve given you space to write down your thoughts, but feel free to take your journal and let Your Higher Self speak to you as you reflect on these topics. The more intentions you have, the more answers you will receive.</string>
     <string name="result">Result</string>
+    <string name="psycholog">Psycholog</string>
+    <string name="dr_name">Dr. Catherine</string>
+    <string name="dr_experience">Experience 5 years</string>
+    <string name="dr_chat_price">Rp. 20.000 / chat</string>
+    <string name="dr_video_call_price">Rp. 50.000 / video call</string>
+    <string name="booking">Booking</string>
+    <string name="add_to_wishlist">Add to wishlist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

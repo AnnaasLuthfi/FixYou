@@ -1,4 +1,4 @@
-package com.myapps.mypsikolog.home.ui.gallery
+package com.myapps.mypsikolog.home.ui.wishlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,13 +8,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.myapps.mypsikolog.databinding.FragmentGalleryBinding
+import com.myapps.mypsikolog.databinding.FragmentWishlistBinding
 
+class WishlistFragment : Fragment() {
 
-class GalleryFragment : Fragment() {
-
-    private lateinit var galleryViewModel: GalleryViewModel
-    private var _binding: FragmentGalleryBinding? = null
+    private lateinit var wishlistViewModel: WishlistViewModel
+    private var _binding: FragmentWishlistBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,14 +24,14 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+        wishlistViewModel =
+            ViewModelProvider(this).get(WishlistViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentWishlistBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        val textView: TextView = binding.textSlideshow
+        wishlistViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

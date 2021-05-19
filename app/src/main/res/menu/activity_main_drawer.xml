@@ -11,11 +11,11 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_profile"
             android:icon="@drawable/ic_baseline_person_24"
             android:title="@string/menu_profile" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_wishlist"
             android:icon="@drawable/ic_baseline_favorite_24"
             android:title="@string/menu_wishlist" />
 
