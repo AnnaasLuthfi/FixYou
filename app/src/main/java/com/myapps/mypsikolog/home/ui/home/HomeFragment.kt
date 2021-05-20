@@ -49,7 +49,6 @@ class HomeFragment : Fragment(), View.OnClickListener {
         binding.cardViewHelp.setOnClickListener(this)
 
 
-
 //        val textView: TextView = binding.textHome
 //        homeViewModel.text.observe(viewLifecycleOwner, Observer {
 //            textView.text = it
