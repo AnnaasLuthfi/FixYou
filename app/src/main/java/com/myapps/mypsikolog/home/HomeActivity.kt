@@ -47,6 +47,16 @@ class HomeActivity : AppCompatActivity() {
                 R.id.nav_notification
             ), drawerLayout
         )
+
+        // Logout Disini gan
+        val navLogout: MenuItem = navView.menu.findItem(R.id.nav_logout)
+        navLogout.setOnMenuItemClickListener (object : MenuItem.OnMenuItemClickListener {
+            override fun onMenuItemClick(item: MenuItem?): Boolean {
+                Toast.makeText(this@HomeActivity, "Logout Disini Gan", Toast.LENGTH_SHORT).show()
+                return true
+            }
+        })
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
