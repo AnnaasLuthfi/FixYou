@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.myapps.mypsikolog">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,10 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPsikolog">
-        <activity android:name=".ui.order.OrderActivity"></activity>
+        <activity android:name=".consult.ConsultActivity"></activity>
+        <activity android:name=".ui.order.OrderActivity" />
         <activity
             android:name=".psychology.PsychologActivity"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
+            android:theme="@style/Theme.MyPsikolog.NoActionBar" />
         <activity
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"
@@ -56,5 +55,7 @@
             </intent-filter>
         </service>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
