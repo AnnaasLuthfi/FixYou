@@ -33,7 +33,10 @@ class ConsultActivity : AppCompatActivity() {
         binding = ActivityConsultBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbarConsult)
+
         supportActionBar?.title = "Consult"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         preferenceManager = PreferenceManager(this)
 
@@ -86,6 +89,11 @@ class ConsultActivity : AppCompatActivity() {
                     }
                 }
             })
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
     }
 
 }

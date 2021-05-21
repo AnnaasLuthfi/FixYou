@@ -8,7 +8,7 @@
     tools:context=".home.ui.home.HomeFragment">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/find_psycholog"
         android:layout_width="348dp"
         android:layout_height="195dp"
         android:layout_marginTop="20dp"
@@ -51,10 +51,10 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/find_psycholog"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toStartOf="@+id/find_psycholog"
+        app:layout_constraintTop_toBottomOf="@+id/find_psycholog" />
 
     <!-- My Order Card-->
     <androidx.cardview.widget.CardView

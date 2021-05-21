@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.myapps.mypsikolog.R
 import com.myapps.mypsikolog.consult.ConsultActivity
 import com.myapps.mypsikolog.databinding.FragmentHomeBinding
+import com.myapps.mypsikolog.psychology.PsychologActivity
 import com.myapps.mypsikolog.ui.order.OrderActivity
 import com.myapps.mypsikolog.utils.Constants.Companion.NAME_PATIENTS
 import com.myapps.mypsikolog.utils.PreferenceManager
@@ -41,6 +42,11 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         binding.cardMyOrder.setOnClickListener {
             startActivity(Intent(activity, OrderActivity::class.java))
+        }
+
+        binding.findPsycholog.setOnClickListener {
+            val intent = Intent(context, PsychologActivity::class.java)
+            startActivity(intent)
         }
 
         binding.cardViewConsult.setOnClickListener(this)
