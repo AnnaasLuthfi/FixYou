@@ -1,268 +1,276 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
     tools:context=".home.ui.home.HomeFragment">
 
-    <ImageView
-        android:id="@+id/find_psycholog"
-        android:layout_width="348dp"
-        android:layout_height="195dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/banner"
-        app:layout_constraintEnd_toEndOf="@+id/textUsername"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textUsername"
-        app:layout_constraintTop_toBottomOf="@+id/textUsername"
-        tools:ignore="ContentDescription" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textUsername"
-        style="@style/text_style_bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/user_name_example"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView"
-        style="@style/text_style_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/hello"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/categories"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/find_psycholog"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/find_psycholog"
-        app:layout_constraintTop_toBottomOf="@+id/find_psycholog" />
-
-    <!-- My Order Card-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_my_order"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/find_psycholog"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="195dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/banner"
+            app:layout_constraintEnd_toEndOf="@+id/textUsername"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textUsername"
+            app:layout_constraintTop_toBottomOf="@+id/textUsername"
+            tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/my_order_icon"
-                android:layout_width="60dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_baseline_list_alt_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/black"
-                tools:ignore="ContentDescription" />
+        <TextView
+            android:id="@+id/textUsername"
+            style="@style/text_style_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name_example"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-            <TextView
-                android:id="@+id/my_order_text"
-                style="@style/text_style_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/my_order"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/my_order_icon" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/text_style_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hello"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/categories"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/find_psycholog"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/find_psycholog"
+            app:layout_constraintTop_toBottomOf="@+id/find_psycholog" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- My Order Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_my_order"
+            android:layout_width="148dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/my_order_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_baseline_list_alt_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/black"
+                    tools:ignore="ContentDescription" />
 
-    <!-- Diagnoze Card-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_diagnoze"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="44dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/card_my_order"
-        app:layout_constraintTop_toTopOf="@+id/card_my_order">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <ImageView
-                android:id="@+id/diagnoze_icon"
-                android:layout_width="60dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/diagnoze_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/diagnoze_text"
-                style="@style/text_style_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/diagnoze"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/diagnoze_icon" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-    <!-- Consult Card-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_consult"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
-        android:layout_marginTop="44dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintStart_toStartOf="@+id/card_my_order"
-        app:layout_constraintTop_toBottomOf="@+id/card_my_order">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/my_order_text"
+                    style="@style/text_style_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/my_order"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_order_icon" />
 
 
-            <ImageView
-                android:id="@+id/consult_icon"
-                android:layout_width="75dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/consult"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/consult_text"
-                style="@style/text_style_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/consult"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/consult_icon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Diagnoze Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_diagnoze"
+            android:layout_width="148dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_my_order"
+            app:layout_constraintTop_toTopOf="@+id/card_my_order">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/diagnoze_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/diagnoze_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
-    <!-- Help Card-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_help"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="44dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
-        app:cardMaxElevation="12dp"
-        app:cardPreventCornerOverlap="true"
-        app:layout_constraintBottom_toBottomOf="@+id/card_view_consult"
-        app:layout_constraintEnd_toEndOf="@+id/card_view_diagnoze"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/card_view_consult"
-        app:layout_constraintTop_toBottomOf="@+id/card_view_diagnoze"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/diagnoze_text"
+                    style="@style/text_style_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/diagnoze"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/diagnoze_icon" />
 
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="75dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/help"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.513"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/textView2"
-                style="@style/text_style_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/help"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.526"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Consult Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_consult"
+            android:layout_width="148dp"
+            android:layout_height="124dp"
+            android:layout_marginTop="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintStart_toStartOf="@+id/card_my_order"
+            app:layout_constraintTop_toBottomOf="@+id/card_my_order">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:id="@+id/consult_icon"
+                    android:layout_width="75dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/consult"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/consult_text"
+                    style="@style/text_style_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/consult"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/consult_icon" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Help Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_help"
+            android:layout_width="148dp"
+            android:layout_height="124dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="44dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintBottom_toBottomOf="@+id/card_view_consult"
+            app:layout_constraintEnd_toEndOf="@+id/card_view_diagnoze"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/card_view_consult"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_diagnoze"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="75dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/help"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.513"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/text_style_light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/help"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.526"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

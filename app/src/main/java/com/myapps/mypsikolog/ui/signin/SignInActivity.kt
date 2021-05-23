@@ -42,7 +42,6 @@ class SignInActivity : AppCompatActivity() {
             finish()
         }
 
-
         binding.btnSignIn.setOnClickListener {
             if (binding.email.text.trim().isEmpty()) {
                 Toast.makeText(this, "Enter Email address", Toast.LENGTH_SHORT).show()

@@ -103,8 +103,9 @@ class SignUpActivity : AppCompatActivity() {
             }
     }
 
-    private fun checkButton(v: View) {
+    fun checkButton(v: View) {
         val radioId: Int = binding.radioGroup.checkedRadioButtonId
         radioButton = findViewById(radioId)
     }
+
 }
