@@ -38,11 +38,11 @@ class AfterSplashActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding?.btnSignUp?.setOnClickListener{
+        binding.btnSignUp.setOnClickListener{
             startActivity(Intent(this@AfterSplashActivity, SignUpActivity::class.java))
         }
 
-        Glide.with(binding.image.context).load(R.drawable.doc).apply(RequestOptions().override(290,290)).into(binding.image)
+        Glide.with(binding.image.context).load(R.drawable.doc_resize).apply(RequestOptions().override(290,290)).into(binding.image)
 
     }
 

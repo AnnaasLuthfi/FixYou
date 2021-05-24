@@ -6,7 +6,7 @@ import com.myapps.mypsikolog.utils.Constants.Companion.KEY_PREFERENCE_NAME
 
 class PreferenceManager {
 
-    private lateinit var sharedPreferences: SharedPreferences
+    private var sharedPreferences: SharedPreferences
 
     constructor(context: Context) {
         sharedPreferences = context.getSharedPreferences(KEY_PREFERENCE_NAME, Context.MODE_PRIVATE)

@@ -16,5 +16,30 @@ class Constants {
 
         const val KEY_PREFERENCE_NAME = "MyPsikologi"
         const val KEY_IS_SIGNED_IN = "isSignedIn"
+
+        const val REMOTE_MSG_AUTHORIZATION = "Authorization"
+        const val REMOTE_MSG_CONTENT_TYPE = "Content-Type"
+
+        const val REMOTE_MSG_TYPE = "type"
+        const val REMOTE_MSG_INVITATION = "invitation"
+        const val REMOTE_MSG_MEETING_TYPE = "meetingType"
+        const val REMOTE_MSG_INVITER_TOKEN = "inviterToken"
+        const val REMOTE_MSG_DATA = "data"
+        const val REMOTE_MSG_REGISTRATION_IDS = "registration_ids"
+
+        const val REMOTE_MSG_INVITATION_RESPONSE = "invitationResponse"
+
+        const val REMOTE_MSG_INVITATION_ACCEPTED = "accepted"
+        const val REMOTE_MSG_INVITATION_REJECTED = "rejected"
+        const val REMOTE_MSG_INVITATION_CANCELLED = "cancelled"
+
+        const val REMOTE_MSG_MEETING_ROOM = "meetingRoom"
+
+        fun getRemoteMessageHeaders(): HashMap<String, String> {
+            val headers = HashMap<String, String>()
+            headers[REMOTE_MSG_AUTHORIZATION] = "key=AAAAsvyEyM4:APA91bGcqUZONdlqU9OvOBcxIXA8sdYt9uyiM0tuPNrHolnHF5pcB37AC_Bks6ItnaMt0bMTIU6lUqfrWHl_04-dWcfIXHvyE2aaMVTPoADj88NpGj19H0_RO3rmfWmraceeHH5yevBL"
+            headers[REMOTE_MSG_CONTENT_TYPE] = "application/json"
+            return headers
+        }
     }
 }

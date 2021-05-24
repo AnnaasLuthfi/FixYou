@@ -24,3 +24,6 @@ c0050479@bangkit.academy (Pw: Babymetal123)
     </service>
 
     token FCM: fZMoh8yeTU-q9WVeN9Vgeu:APA91bE8-gSFRvxnqTVnuiomvnKHf7jQMeC-NljddLlJh9pYdFjKXyqEh2XLlnYcKFYA06WeeBv8b5yraVlCoTsQxzgaAhF8SP6Y5Kz_-nCyI1m9VVbJbSQimnVgCcLjwaKMDi-EiXzw
+
+    Cloud Messaging server key = AAAAsvyEyM4:APA91bGcqUZONdlqU9OvOBcxIXA8sdYt9uyiM0tuPNrHolnHF5pcB37AC_Bks6ItnaMt0bMTIU6lUqfrWHl_04-dWcfIXHvyE2aaMVTPoADj88NpGj19H0_RO3rmfWmraceeHH5yevBL
+    liatnya ada di project setting -> Cloud Messaging
