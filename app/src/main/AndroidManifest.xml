@@ -14,13 +14,12 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:theme="@style/Theme.MyPsikolog">
+
         <activity android:name=".psycholog.PsychologDetailActivity"
             android:theme="@style/Theme.MyPsikolog.NoActionBar">
 
         </activity>
-        <activity
-            android:name=".consult.ConsultActivity"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar">
+
         <activity android:name=".ui.calling.VideoCallActivity"
             android:screenOrientation="portrait"/>
 
