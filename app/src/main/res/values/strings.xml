@@ -39,11 +39,22 @@
     <string name="result">Result</string>
     <string name="psycholog">Psycholog</string>
     <string name="dr_name">Dr. Catherine</string>
-    <string name="dr_experience">Experience 5 years</string>
-    <string name="dr_chat_price">Rp. 20.000 / chat</string>
-    <string name="dr_video_call_price">Rp. 50.000 / video call</string>
+    <string name="dr_experience">Experience </string>
+    <string name="dr_experienceyear"> years </string>
+    <string name="rp">Rp.</string>
+    <string name="dr_chat_price"> / chat</string>
+    <string name="dr_video_call_price"> / video call</string>
     <string name="booking">Booking</string>
     <string name="add_to_wishlist">Add to wishlist</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="psychologist">Psychologist</string>
+    <string name="about_text">About</string>
+    <string name="patient_text">Patient</string>
+    <string name="patient_value">10k</string>
+    <string name="rating_value">4.5</string>
+    <string name="experience_value">5</string>
+    <string name="book_now">Book Now</string>
+    <string name="rating_text">Rating</string>
 </resources>

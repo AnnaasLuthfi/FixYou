@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -20,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.iid.FirebaseInstanceId
 import com.myapps.mypsikolog.R
 import com.myapps.mypsikolog.databinding.ActivityHomeBinding
-import com.myapps.mypsikolog.psychology.PsychologActivity
+import com.myapps.mypsikolog.psycholog.PsychologActivity
 import com.myapps.mypsikolog.ui.AfterSplashActivity
 import com.myapps.mypsikolog.utils.Constants.Companion.KEY_FCM_TOKEN
 import com.myapps.mypsikolog.utils.Constants.Companion.KEY_PATIENTS
