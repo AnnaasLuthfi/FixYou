@@ -57,4 +57,18 @@
     <string name="experience_value">5</string>
     <string name="book_now">Book Now</string>
     <string name="rating_text">Rating</string>
+    <string name="select_date_text">Select Date -</string>
+    <string name="select_time_text">Select Time</string>
+    <string name="date_value">Mei 2021</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="_10am_11am">10am - 11am</string>
+    <string name="_2pm_3pm">2pm - 3pm</string>
+    <string name="_7pm_8pm">7pm - 8pm</string>
+    <string name="book_for_chat">Book for chat</string>
+    <string name="book_for_video_chat">Book for Video Chat</string>
+    <string name="buy">Buy</string>
 </resources>
