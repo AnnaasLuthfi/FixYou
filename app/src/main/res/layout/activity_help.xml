@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpActivity"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp">
+
+    <TextView
+        android:id="@+id/titleHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fontsfree_net_sfprotext_bold"
+        android:text="Help Center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleProblem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/fontsfree_net_sfprotext_regular"
+        android:layout_marginTop="50dp"
+        android:text="Whats Your Problem ? "
+        app:layout_constraintTop_toBottomOf="@+id/titleHelp" />
+
+    <EditText
+        android:id="@+id/textPurpose"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:background="#F9F6F6"
+        android:ems="10"
+        android:gravity="start|top"
+        android:layout_marginTop="50dp"
+        android:inputType="textMultiLine"
+        app:layout_constraintCircleRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleProblem" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_700"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPurpose" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

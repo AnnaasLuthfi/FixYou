@@ -7,35 +7,33 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/Theme.MyPsikolog">
-
-        <activity android:name=".psycholog.PsychologDetailActivity"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar">
-
-        </activity>
-
-        <activity android:name=".ui.calling.VideoCallActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ui.calling.SendingInvitationActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ui.calling.IncomingInvitationActivity"
-            android:screenOrientation="portrait"/>
-
+        <activity android:name=".HelpActivity"></activity>
+        <activity
+            android:name=".psycholog.PsychologDetailActivity"
+            android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
+        <activity
+            android:name=".ui.calling.VideoCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.calling.SendingInvitationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.calling.IncomingInvitationActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".consult.ConsultActivity"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".ui.order.OrderActivity"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MyPsikolog.NoActionBar" />
+        <activity
+            android:name=".ui.order.OrderActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".psycholog.PsychologActivity"
             android:theme="@style/Theme.MyPsikolog.NoActionBar" />
@@ -43,22 +41,16 @@
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar">
-
-        </activity>
-
+            android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
         <activity
             android:name=".ui.signup.SignUpActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.signin.SignInActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.AfterSplashActivity"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".ui.splashscreen.SplashActivity"
             android:screenOrientation="portrait">
