@@ -135,19 +135,19 @@ class FacialExpressionRecognition internal constructor(
         var value: String = ""
         if (emotionV != null) {
             value = if (emotionV >= 0 && emotionV < 0.5){
-                "Suprise"
+                "Terkejut"
             }else if(emotionV >= 0.5 && emotionV < 1.5){
-                "Fear"
+                "Takut"
             }else if(emotionV >= 1.5 && emotionV < 2.5){
-                "Angry"
+                "Marah"
             }else if(emotionV >= 2.5 && emotionV < 3.5){
-                "Neutral"
+                "Netral"
             }else if(emotionV >= 3.5 && emotionV < 4.5){
-                "Sad"
+                "Sedih"
             }else if(emotionV >= 4.5 && emotionV < 5.5){
-                "Disgust"
+                "Menjijikan"
             }else {
-                "Happy"
+                "Senang"
             }
         }
         return value
