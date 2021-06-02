@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.myapps.mypsikolog.HelpActivity
 import com.myapps.mypsikolog.R
 import com.myapps.mypsikolog.consult.ConsultActivity
 import com.myapps.mypsikolog.databinding.FragmentHomeBinding
@@ -78,7 +79,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
             }
             
             R.id.card_view_help -> {
-                Toast.makeText(context, "help", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(context, HelpActivity::class.java))
             }
 
             R.id.card_my_order ->{
