@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.myapps.mypsikolog">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -14,10 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPsikolog">
+      
+        <activity android:name=".ui.order.CameraActivity"></activity>
         <activity android:name=".HelpActivity"></activity>
+      
         <activity
             android:name=".psycholog.PsychologDetailActivity"
             android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
+      
         <activity
             android:name=".ui.calling.VideoCallActivity"
             android:screenOrientation="portrait" />
@@ -41,7 +43,7 @@
             android:name=".home.HomeActivity"
             android:label="@string/title_activity_home"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
+            android:theme="@style/Theme.MyPsikolog.NoActionBar" />
         <activity
             android:name=".ui.signup.SignUpActivity"
             android:screenOrientation="portrait" />
@@ -69,5 +71,11 @@
             </intent-filter>
         </service>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
 </manifest>

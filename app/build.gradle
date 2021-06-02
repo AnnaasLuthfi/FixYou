@@ -36,6 +36,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            jni {
+                srcDirs 'src\\main\\jni', 'src\\main\\jnilibs'
+            }
+        }
+    }
 
 
 }
@@ -52,6 +59,7 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation project(path: ':openCVLibrary3413')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -88,6 +96,13 @@ dependencies {
     //jitsi meet
     implementation ('org.jitsi.react:jitsi-meet-sdk:2.8.2') { transitive = true }
 
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
 
+    //tensorflow
+    implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0-rc1'
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-task-vision:0.1.0'
+    implementation 'org.tensorflow:tensorflow-lite-task-text:0.1.0'
 
 }
