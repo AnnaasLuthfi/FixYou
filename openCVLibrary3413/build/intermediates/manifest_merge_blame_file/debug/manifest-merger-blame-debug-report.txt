@@ -5,10 +5,10 @@
 5    android:versionName="3.4.13" >
 6
 7    <uses-sdk
-7-->D:\Program\AndroidStudio-Kotlin\DICODING\Capstone\MyPsikolog\openCVLibrary3413\src\main\AndroidManifest.xml:7:5-73
+7-->D:\Internship\BANGKIT\Backup22\FixYou\openCVLibrary3413\src\main\AndroidManifest.xml:7:5-73
 8        android:minSdkVersion="8"
-8-->D:\Program\AndroidStudio-Kotlin\DICODING\Capstone\MyPsikolog\openCVLibrary3413\src\main\AndroidManifest.xml:7:15-40
+8-->D:\Internship\BANGKIT\Backup22\FixYou\openCVLibrary3413\src\main\AndroidManifest.xml:7:15-40
 9        android:targetSdkVersion="30" />
-9-->D:\Program\AndroidStudio-Kotlin\DICODING\Capstone\MyPsikolog\openCVLibrary3413\src\main\AndroidManifest.xml:7:41-70
+9-->D:\Internship\BANGKIT\Backup22\FixYou\openCVLibrary3413\src\main\AndroidManifest.xml:7:41-70
 10
 11</manifest>
