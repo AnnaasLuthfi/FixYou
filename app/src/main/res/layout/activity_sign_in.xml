@@ -13,9 +13,9 @@
         android:layout_marginEnd="12dp">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:src="@drawable/logo_transparant" />
+            android:src="@drawable/logo_rev" />
 
         <TextView
             android:layout_width="wrap_content"

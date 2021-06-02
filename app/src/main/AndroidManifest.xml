@@ -12,10 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPsikolog">
+      
         <activity android:name=".ui.order.CameraActivity"></activity>
+        <activity android:name=".HelpActivity"></activity>
+      
         <activity
             android:name=".psycholog.PsychologDetailActivity"
-            android:theme="@style/Theme.MyPsikolog.NoActionBar" />
+            android:theme="@style/Theme.MyPsikolog.NoActionBar"></activity>
+      
         <activity
             android:name=".ui.calling.VideoCallActivity"
             android:screenOrientation="portrait" />
