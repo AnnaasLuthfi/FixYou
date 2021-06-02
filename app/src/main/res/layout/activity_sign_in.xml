@@ -15,7 +15,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="200dp"
-            android:src="@drawable/logo_transparant" />
+            android:src="@drawable/logo_rev" />
 
         <TextView
             android:layout_width="wrap_content"
