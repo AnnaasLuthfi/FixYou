@@ -27,7 +27,7 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
 
     private lateinit var mRgba: Mat
     private lateinit var mGray: Mat
-    lateinit var mOpenCvCameraView: CameraBridgeViewBase
+    lateinit var openCvCamera: CameraBridgeViewBase
     private lateinit var facialExpressionRecognition: FacialExpressionRecognition
     private val mLoaderCallback: BaseLoaderCallback1 =
         object : org.opencv.android.BaseLoaderCallback(this) {
@@ -35,7 +35,7 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
                 when (status) {
                     LoaderCallbackInterface.SUCCESS -> {
                         Log.d(TAG, "OpenCv is loaded")
-                        mOpenCvCameraView.enableView()
+                        openCvCamera.enableView()
                     }
 
                     else -> {
@@ -55,7 +55,7 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
-        val MY_PERMISSIONS_REQUEST_CAMERA = 0
+        val PERMISSIONS_REQUEST_CAMERA = 0
         if (ContextCompat.checkSelfPermission(
                 this,
                 android.Manifest.permission.CAMERA
@@ -64,15 +64,15 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(android.Manifest.permission.CAMERA),
-                MY_PERMISSIONS_REQUEST_CAMERA
+                    PERMISSIONS_REQUEST_CAMERA
             )
         }
 
         setContentView(R.layout.activity_camera)
 
-        mOpenCvCameraView = findViewById<CameraBridgeViewBase>(R.id.frame_surface)
-        mOpenCvCameraView.visibility = SurfaceView.VISIBLE
-        mOpenCvCameraView.setCvCameraViewListener(this)
+        openCvCamera = findViewById(R.id.frame_surface)
+        openCvCamera.visibility = SurfaceView.VISIBLE
+        openCvCamera.setCvCameraViewListener(this)
         try {
             val inputSize = 48;
             facialExpressionRecognition =
@@ -98,12 +98,12 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
 
     override fun onPause() {
         super.onPause()
-        mOpenCvCameraView.disableView()
+        openCvCamera.disableView()
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        mOpenCvCameraView.disableView()
+        openCvCamera.disableView()
     }
 
 

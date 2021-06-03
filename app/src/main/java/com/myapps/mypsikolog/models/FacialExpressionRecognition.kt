@@ -19,22 +19,17 @@ import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
 
 
-class FacialExpressionRecognition internal constructor(
-    assetManager: AssetManager,
-    context: Context,
-    modelPath: String,
-    inputSize: Int
-) {
+class FacialExpressionRecognition internal constructor(assetManager: AssetManager, context: Context, modelPath: String, inputSize: Int) {
 
-    private lateinit var interpreter: Interpreter
-    private var inputSize = 0
+    private var interpreter: Interpreter
+    private var sizeInp = 0
     private var height = 0
     private var width = 0
-    private lateinit var gpuDelegate: GpuDelegate
+    private var gpuDelegate: GpuDelegate
     private lateinit var cascadeClassifier: CascadeClassifier
 
     init {
-        this.inputSize = inputSize
+        this.sizeInp = inputSize
         val options: Interpreter.Options = Interpreter.Options()
         gpuDelegate = GpuDelegate()
         options.addDelegate(gpuDelegate)
@@ -46,8 +41,8 @@ class FacialExpressionRecognition internal constructor(
             val inputStream: InputStream =
                 context.resources.openRawResource(com.myapps.mypsikolog.R.raw.haarcascade_frontalface_alt)
             val cascadeDir: File = context.getDir("cascade", Context.MODE_PRIVATE)
-            val mCascadeFile: File = File(cascadeDir, "haarcascade_frontalface_alt")
-            val outputStream: FileOutputStream = FileOutputStream(mCascadeFile)
+            val mCascadeFile = File(cascadeDir, "haarcascade_frontalface_alt")
+            val outputStream = FileOutputStream(mCascadeFile)
             val buffer = ByteArray(4096)
             var byteRead: Int
             while (inputStream.read(buffer).also { byteRead = it } != -1) {
@@ -66,14 +61,14 @@ class FacialExpressionRecognition internal constructor(
 
         Core.flip(matImage.t(), matImage, 1)
 
-        val grayScaleImage: Mat = Mat()
+        val grayScaleImage = Mat()
         Imgproc.cvtColor(matImage, grayScaleImage, Imgproc.COLOR_RGBA2GRAY)
 
         height = grayScaleImage.height()
         width = grayScaleImage.width()
 
-        val absoluteFaceSize: Int = (height * 0.1).toInt()
-        val faces: MatOfRect = MatOfRect()
+        val faceSize: Int = (height * 0.1).toInt()
+        val faces = MatOfRect()
         if (cascadeClassifier != null) {
             cascadeClassifier.detectMultiScale(
                 grayScaleImage,
@@ -81,7 +76,7 @@ class FacialExpressionRecognition internal constructor(
                 1.1,
                 2,
                 2,
-                Size(absoluteFaceSize.toDouble(), absoluteFaceSize.toDouble()),
+                Size(faceSize.toDouble(), faceSize.toDouble()),
                 Size()
             )
         }
@@ -101,14 +96,14 @@ class FacialExpressionRecognition internal constructor(
                 faceArray[i].br().y.toInt() - faceArray[i].tl().y.toInt()
             )
 
-            val cropped_rgba = Mat(matImage, roi)
+            val cropRgba = Mat(matImage, roi)
             var bitmap: Bitmap? = null
             bitmap = Bitmap.createBitmap(
-                cropped_rgba.cols(),
-                cropped_rgba.rows(),
+                cropRgba.cols(),
+                cropRgba.rows(),
                 Bitmap.Config.ARGB_8888
             )
-            Utils.matToBitmap(cropped_rgba, bitmap)
+            Utils.matToBitmap(cropRgba, bitmap)
             val scaleBitmap = Bitmap.createScaledBitmap(bitmap, 48, 48, false)
             val byteBuffer: ByteBuffer = convertBitmapToByteBuffer(scaleBitmap)
             val emotion = Array(1) {
@@ -118,12 +113,13 @@ class FacialExpressionRecognition internal constructor(
             }
 
             interpreter.run(byteBuffer, emotion)
-            val emotionV: Float = get(get(emotion, 0), 0) as Float
-            Log.d("facial_Expression", "Output: " + emotionV)
+            val emotionValue: Float = get(get(emotion, 0), 0) as Float
 
-            val emotionS:String = getEmotionText(emotionV)
-            Imgproc.putText(matImage, "$emotionS ($emotionV)", Point((faceArray[i].tl().x.toInt()+10).toDouble(),
-                (faceArray[i].tl().y.toInt()+20).toDouble()
+            Log.d("facial_Expression", "Output: $emotionValue")
+
+            val emotionSet : String = getEmotionTextValueAnalysis(emotionValue)
+            Imgproc.putText(matImage, "$emotionSet ($emotionValue)", Point((faceArray[i].tl().x.toInt() + 10).toDouble(),
+                (faceArray[i].tl().y.toInt() + 20).toDouble()
             ), 1, 1.5, Scalar(0.0, 0.0, 255.0, 150.0), 2)
         }
 
@@ -131,20 +127,20 @@ class FacialExpressionRecognition internal constructor(
         return matImage
     }
 
-    private fun getEmotionText(emotionV: Float?): String {
+    private fun getEmotionTextValueAnalysis(emotionValue: Float?): String {
         var value: String = ""
-        if (emotionV != null) {
-            value = if (emotionV >= 0 && emotionV < 0.5){
+        if (emotionValue != null) {
+            value = if (emotionValue >= 0 && emotionValue < 0.5){
                 "Terkejut"
-            }else if(emotionV >= 0.5 && emotionV < 1.5){
+            }else if(emotionValue >= 0.5 && emotionValue < 1.5){
                 "Takut"
-            }else if(emotionV >= 1.5 && emotionV < 2.5){
+            }else if(emotionValue >= 1.5 && emotionValue < 2.5){
                 "Marah"
-            }else if(emotionV >= 2.5 && emotionV < 3.5){
+            }else if(emotionValue >= 2.5 && emotionValue < 3.5){
                 "Netral"
-            }else if(emotionV >= 3.5 && emotionV < 4.5){
+            }else if(emotionValue >= 3.5 && emotionValue < 4.5){
                 "Sedih"
-            }else if(emotionV >= 4.5 && emotionV < 5.5){
+            }else if(emotionValue >= 4.5 && emotionValue < 5.5){
                 "Menjijikan"
             }else {
                 "Senang"
@@ -155,7 +151,7 @@ class FacialExpressionRecognition internal constructor(
 
     private fun convertBitmapToByteBuffer(scaleBitmap: Bitmap?): ByteBuffer {
         val byteBuffer: ByteBuffer
-        val sizeImage: Int = inputSize
+        val sizeImage: Int = sizeInp
         byteBuffer = ByteBuffer.allocateDirect(4 * 1 * sizeImage * sizeImage * 3)
 
         byteBuffer.order(ByteOrder.nativeOrder())
@@ -171,12 +167,13 @@ class FacialExpressionRecognition internal constructor(
         )
 
         var pixel = 0
+
         for (i in 0 until sizeImage) {
             for (j in 0 until sizeImage) {
-                val `val` = intValues[pixel++]
-                byteBuffer.putFloat((`val` shr 16 and 0xFF) / 255.0f)
-                byteBuffer.putFloat((`val` shr 8 and 0xFF) / 255.0f)
-                byteBuffer.putFloat((`val` and 0xFF) / 255.0f)
+                val `value` = intValues[pixel++]
+                byteBuffer.putFloat((`value` shr 16 and 0xFF) / 255.0f)
+                byteBuffer.putFloat((`value` shr 8 and 0xFF) / 255.0f)
+                byteBuffer.putFloat((`value` and 0xFF) / 255.0f)
             }
         }
         return byteBuffer
@@ -185,7 +182,7 @@ class FacialExpressionRecognition internal constructor(
     @Throws(IOException::class)
     private fun loadModelFile(assetManager: AssetManager, modelPath: String): MappedByteBuffer {
         val assetFileDescriptor: AssetFileDescriptor = assetManager.openFd(modelPath)
-        val inputStream: FileInputStream = FileInputStream(assetFileDescriptor.fileDescriptor)
+        val inputStream = FileInputStream(assetFileDescriptor.fileDescriptor)
         val fileChannel: FileChannel = inputStream.channel
 
         val startOffset: Long = assetFileDescriptor.startOffset
