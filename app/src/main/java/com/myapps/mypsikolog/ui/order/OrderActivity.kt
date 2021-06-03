@@ -1,25 +1,20 @@
 package com.myapps.mypsikolog.ui.order
 
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.myapps.mypsikolog.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.myapps.mypsikolog.databinding.ActivityOrderBinding
-import org.opencv.android.OpenCVLoader
+import com.myapps.mypsikolog.models.Psycholog
 
 
 class OrderActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOrderBinding
-
-    init {
-        if (OpenCVLoader.initDebug()){
-            Log.d("MainActivity: ", "Opencv is loaded")
-        }else{
-            Log.d("MaincActivity: ", "Opencv is load")
-        }
-    }
+    private lateinit var database: FirebaseDatabase
+    private lateinit var reference: DatabaseReference
+    private lateinit var psycholog: Psycholog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,10 +22,26 @@ class OrderActivity : AppCompatActivity() {
         binding = ActivityOrderBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.openCvButton.setOnClickListener {
-            val intent = Intent(this, CameraActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            startActivity(intent)
-        }
+        supportActionBar?.title = "My Order"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        //firebase
+        database = FirebaseDatabase.getInstance()
+        reference = database.getReference("Order")
+        binding.orderRecycler.setHasFixedSize(true)
+        binding.orderRecycler.layoutManager = LinearLayoutManager(this)
+
+        loadOrder(psycholog.name)
 
     }
+
+    private fun loadOrder(name: String) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
+
 }

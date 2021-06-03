@@ -123,6 +123,4 @@ class CameraActivity : AppCompatActivity(), CameraBridgeViewBase.CvCameraViewLis
         return mRgba
     }
 
-    //next video
-
 }

@@ -7,9 +7,7 @@ import kotlinx.parcelize.Parcelize
 data class MyOrder(
 
     var doctorName: String = "",
-    var date: String = "",
-//    var time: String = "",
-//    var consultType: String = "",
+    var image: String = "",
     var status: String = "0",
 
 ): Parcelable

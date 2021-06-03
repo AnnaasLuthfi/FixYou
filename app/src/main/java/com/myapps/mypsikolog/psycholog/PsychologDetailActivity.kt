@@ -8,13 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.jakewharton.threetenabp.AndroidThreeTen
-import com.myapps.mypsikolog.R
 import com.myapps.mypsikolog.databinding.ActivityPsychologDetailBinding
 import com.myapps.mypsikolog.databinding.BookingpopupBinding
 import com.myapps.mypsikolog.models.MyOrder
 import com.myapps.mypsikolog.models.Psycholog
-import org.threeten.bp.LocalDateTime
 import java.util.*
 
 
@@ -113,18 +110,14 @@ class PsychologDetailActivity : AppCompatActivity() {
     }
 
     private fun showPopUp(){
+
+        val date = arrayOf("Mon", "Tue", "wed", "Thu", "Fri", "Sat", "Sat")
+
         bindingPopup = BookingpopupBinding.inflate(layoutInflater)
         dialog.setContentView(bindingPopup.root)
-//        val closeButton = dialog.findViewById<ImageView>(R.id.popupBack)
-//        val buyButton = dialog.findViewById<Button>(R.id.buyButton)
 
         val closeButton = bindingPopup.popupBack
         val buyButton = bindingPopup.buyButton
-
-        //radio date
-        val dateCheck = dialog.findViewById<RadioGroup>(R.id.radioDateGroup)
-        val id: Int = dateCheck.checkedRadioButtonId
-        radioDateButton = dialog.findViewById(id)
 
         closeButton.setOnClickListener {
             dialog.dismiss()
@@ -133,11 +126,12 @@ class PsychologDetailActivity : AppCompatActivity() {
 
             val myOrder = MyOrder(
                 psycholog?.name!!,
-                radioDateButton.text.toString(),
+                psycholog?.image!!
             )
             request.child(System.currentTimeMillis().toString())
                 .setValue(myOrder)
             Toast.makeText(this, "Buy Success", Toast.LENGTH_SHORT).show()
+            finish()
         }
         dialog.show()
     }
@@ -171,24 +165,5 @@ class PsychologDetailActivity : AppCompatActivity() {
         binding.doctorDetailRating4.visibility = View.VISIBLE
         binding.doctorDetailRating5.visibility = View.VISIBLE
     }
-
-
-    fun checkDateButton(view: View){
-        val dateCheck = dialog.findViewById<RadioGroup>(R.id.radioDateGroup)
-        val radioId: Int = dateCheck.checkedRadioButtonId
-        radioDateButton = dialog.findViewById(radioId)
-    }
-
-    fun checkTimeButton(view: View) {
-        val timeCheck = dialog.findViewById<RadioGroup>(R.id.radioTimeGroup)
-        val radioId: Int = timeCheck.checkedRadioButtonId
-        radioTimeButton = dialog.findViewById(radioId)
-    }
-    fun checkPriceButton(view: View) {
-        val priceCheck = dialog.findViewById<RadioGroup>(R.id.radioPriceGroup)
-        val radioId: Int = priceCheck.checkedRadioButtonId
-        radioPriceButton = dialog.findViewById(radioId)
-    }
-
 
 }

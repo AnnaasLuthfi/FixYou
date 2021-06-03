@@ -90,10 +90,10 @@ class ConsultActivity : AppCompatActivity(), UserListener {
                             continue
                         }
                         val user = User()
-                        user.userName = documentSnapshot.getString(Constants.NAME_PATIENTS)!!
-                        user.name = documentSnapshot.getString(Constants.NAME_PATIENTS)!!
-                        user.email = documentSnapshot.getString(Constants.EMAIL_PATIENTS)!!
-                        user.token = documentSnapshot.getString(Constants.KEY_FCM_TOKEN)!!
+                        user.userName = documentSnapshot.getString(Constants.NAME_PATIENTS).toString()
+                        user.name = documentSnapshot.getString(Constants.NAME_PATIENTS).toString()
+                        user.email = documentSnapshot.getString(Constants.EMAIL_PATIENTS).toString()
+                        user.token = documentSnapshot.getString(Constants.KEY_FCM_TOKEN).toString()
                         listItem.add(user)
                     }
 
