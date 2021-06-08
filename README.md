@@ -1,4 +1,4 @@
-**Capstone Project Bankit Academy:**
+**Capstone Project Bangkit Academy:**
 
 **Project ID: B21-CAP0119**
 
