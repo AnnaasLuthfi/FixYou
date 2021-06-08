@@ -1,8 +1,10 @@
 **Capstone Project Bankit Academy:
 **
 
-**Project ID: B21-CAP0119**
-**Project Name: FixYou**
+**Project ID: B21-CAP0119
+**
+**Project Name: FixYou
+**
 **Project Team Member:**
 - Annaas Luthfi Alfadhli (A0050481)
 - Muhammad Naufal (A0050471)
