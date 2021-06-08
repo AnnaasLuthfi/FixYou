@@ -1,4 +1,5 @@
-**Capstone Project Bangkit Academy:**
+<h1>Capstone Project Bangkit Academy:</h1>
+
 
 **Project ID: B21-CAP0119**
 
@@ -11,3 +12,5 @@
 - Nourma Rafita Sari (C3072749)
 - Anugrah Hidayat (M0111148)
 - Sheerlin Yudia Marindy (M0111150)
+
+
