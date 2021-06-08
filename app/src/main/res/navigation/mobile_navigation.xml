@@ -13,23 +13,6 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_wishlist"
-        android:name="com.myapps.mypsikolog.home.ui.wishlist.WishlistFragment"
-        android:label="@string/menu_wishlist"
-        tools:layout="@layout/fragment_wishlist" />
-
-    <fragment
-        android:id="@+id/nav_myorder"
-        android:name="com.myapps.mypsikolog.home.ui.myorder.MyOrderFragment"
-        android:label="@string/menu_my_order"
-        tools:layout="@layout/my_order_fragment" />
-
-    <fragment
-        android:id="@+id/nav_notification"
-        android:name="com.myapps.mypsikolog.home.ui.notification.NotificationFragment"
-        android:label="@string/menu_notifications"
-        tools:layout="@layout/notification_fragment" />
-    <fragment
         android:id="@+id/nav_profile"
         android:name="com.myapps.mypsikolog.home.ui.profile.ProfileFragment"
         android:label="profile_fragment"

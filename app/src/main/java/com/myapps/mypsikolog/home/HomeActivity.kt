@@ -51,10 +51,6 @@ class HomeActivity : AppCompatActivity() {
             setOf(
                 R.id.nav_home,
                 R.id.nav_profile,
-                R.id.nav_wishlist,
-                R.id.nav_wishlist,
-                R.id.nav_myorder,
-                R.id.nav_notification
             ), drawerLayout
         )
 
