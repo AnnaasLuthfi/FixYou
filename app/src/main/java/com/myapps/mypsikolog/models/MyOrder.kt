@@ -9,5 +9,6 @@ data class MyOrder(
     var doctorName: String = "",
     var image: String = "",
     var status: String = "0",
+    var userEmai: String = ""
 
 ): Parcelable

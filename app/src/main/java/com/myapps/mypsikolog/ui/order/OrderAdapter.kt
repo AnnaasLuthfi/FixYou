@@ -10,7 +10,8 @@ import com.myapps.mypsikolog.databinding.ListOrderBinding
 import com.myapps.mypsikolog.models.MyOrder
 import com.myapps.mypsikolog.models.Psycholog
 
-class OrderAdapter(option: FirebaseRecyclerOptions<MyOrder>) : FirebaseRecyclerAdapter<MyOrder, OrderAdapter.OrderViewHolder>(option) {
+class OrderAdapter(option: FirebaseRecyclerOptions<MyOrder>) :
+    FirebaseRecyclerAdapter<MyOrder, OrderAdapter.OrderViewHolder>(option) {
 
     class OrderViewHolder(private val binding: ListOrderBinding) :
         RecyclerView.ViewHolder(binding.root) {

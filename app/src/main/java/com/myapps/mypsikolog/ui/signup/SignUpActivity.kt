@@ -7,6 +7,8 @@ import android.view.View
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.myapps.mypsikolog.databinding.ActivitySignUpBinding
 import com.myapps.mypsikolog.home.HomeActivity
@@ -27,6 +29,8 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var radioButton: RadioButton
     private lateinit var preferenceManager: PreferenceManager
+    private lateinit var database: FirebaseDatabase
+    private lateinit var request: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,9 @@ class SignUpActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         preferenceManager = PreferenceManager(applicationContext)
+
+        database = FirebaseDatabase.getInstance()
+        request = database.getReference("User")
 
         // mempertahankan SignUp
         if (preferenceManager.getBoolean(KEY_IS_SIGNED_IN)) {
@@ -101,6 +108,9 @@ class SignUpActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
             }
+
+        request.child(System.currentTimeMillis().toString())
+            .setValue(patient)
     }
 
     fun checkButton(v: View) {
