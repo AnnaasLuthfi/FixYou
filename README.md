@@ -13,4 +13,4 @@
 - Anugrah Hidayat (M0111148)
 - Sheerlin Yudia Marindy (M0111150)
 
-
+We created an application using Machine Learning to detect a person's emotions from a video, to find out whether the patient is happy, sad, disgusted, feared, surprise, angry, or neutral. This application aims to help psychologists find out the emotions felt by their patients, so that psychologists can provide the right treatment for their patients based on their emotion and in this application we can make calls with videocall
